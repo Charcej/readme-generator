@@ -1,4 +1,3 @@
-//Packages and modules
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -7,58 +6,63 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () => {
     return inquirer.prompt([
-        {type: 'input',
-        message: 'What is the title of the project?',
-        name: 'title'},
-
-        {type: 'input',
-        message: 'Describe your project:',
-        name: 'description'
-        },
-
-        {type: 'input',
-        message: 'How do you install your project?',
-        name: 'install'
-        },
-
-        {type: 'input',
-        message: 'How is your project used?',
-        name: 'usage'
-        },
-
-        {type: 'input',
-        message: 'What tests run with your project?',
-        name: 'tests'
-        },
-
-        {type: 'input',
-        message: 'How can people contribute to your project?',
-        name: 'contribute'
-        },
-
-        {type: 'input',
-        message: 'What is your GitHub user name?',
-        name: 'github'
-        },
-
-        {type: 'input',
-        message: 'What is your email address?',
-        name: 'email'
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of the project?',
         },
 
         {
-        name: "license",
-        type: "list",
-        message: "Choose your license:",
-        choices: ["MIT", "Apache", "GPL", "BSD3"],
+            type: 'input',
+            name: 'description',
+            message: 'Describe your project:',
         },
 
+        {
+            type: 'input',
+            name: 'install',
+            message: 'How do you install your project?',
+        },
 
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'How is your project used?',
+        },
+
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'What tests run with your project?',
+        },
+
+        {
+            type: 'input',
+            name: 'contribute',
+            message: 'How can people contribute to your project?',
+        },
+
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your GitHub user name?',
+        },
+
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+        },
+
+        {
+            type: "list",
+            name: "license",
+            message: "Choose your license:",
+            choices: ["MIT", "Apache", "GPL", "BSD3"],
+        },
     ]);
 };
 
-
-// Function to init app
 const init = () => {
     promptUser()
       .then((answers) => writeFileAsync('README.md', generateMarkdown(answers)))
@@ -66,5 +70,4 @@ const init = () => {
       .catch((err) => console.error(err));
   };
 
-// Function call to init app
 init();

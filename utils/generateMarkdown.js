@@ -1,6 +1,5 @@
-//Generates markdown doc
 const generateMarkdown = data => {
-  //Takes the input of the license prompts and assigns a url to the proper license
+  
   let licenseLink = '';
   
   switch(data.license) {
@@ -19,7 +18,6 @@ const generateMarkdown = data => {
     default: licenseLink = 'This app has no license.'
   }
   
-  //Markdown doc creation
   return `
 [![Generic badge](https://img.shields.io/badge/license-${data.license}-<COLOR>.svg)](#license)
 # ${data.title}
