@@ -1,22 +1,18 @@
 {
-  "name": "static-site",
+  "name": "generate-readme",
   "version": "1.0.0",
-  "description": "[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)",
+  "description": "This app generates a readme.md file based on user input.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdfishe1/generate-readme.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Charles Fisher",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Charcej/readme-generator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Charcej/readme-generator/issues"
-  },
-  "homepage": "https://github.com/Charcej/readme-generator#readme"
+  }
 }

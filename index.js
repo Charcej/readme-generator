@@ -1,107 +1,70 @@
-// TODO: Include packages needed for this application
+//Packages and modules needed for this application
+const generateMarkdown = require('./utils/generateMarkdown.js');
 const inquirer = require('inquirer');
-const { writeFile } = require('./utils/generateMarkdown.js');
+const fs = require('fs');
+const util = require('util');
+const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
-const questions = readmeData => { 
-    if (!readmeData) {
-        readmeData = [];
-    }
-    return inquirer
-    .prompt([
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is the name of your project? (Required)', 
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('Please enter the name of your project.');
-              return false;
-            }
-          }
-    },
-    {
-        type: 'input',
-        name: 'purpose',
-        message: 'Please describe the purpose of this project (Required)',
-        validate: purposeInput => {
-            if (purposeInput) {
-              return true;
-            } else {
-              console.log('Please enter a description of the purpose of this project.');
-              return false;
-            }
-          }
-    },
-    {
-        type: 'input',
-        name: 'version',
-        message: 'Please describe this version (Required)',
-        validate: versionInput => {
-            if (versionInput) {
-              return true;
-            } else {
-              console.log('Please describe the version of this project.');
-              return false;
-            }
-          }
-    },
-    {
-        type: 'checkbox',
-        name: 'languages',
-        message: 'What languages were used to build this project? (Check all that apply)',
-        choices: ['HTML', 'CSS', 'JavaScript', 'ES6', 'jQuery', 'Bootstrap', 'Node,' ]
-    },
-    {
-        type: 'input',
-        name: 'website',
-        message: 'Please include a link to the deployed website (Required',
-        validate: webInput => {
-            if (webInput) {
-              return true;
-            } else {
-              console.log('Please include a link to the deployed website.');
-              return false;
-            }
-          }
-    },
-    {
-        type: 'input',
-        name: 'screenshot',
-        message: 'Please include the code for a screenshot',
-        validate: screenInput => {
-            if (screenInput) {
-              return true;
-            } else {
-              console.log('Please include code for a screenshot.');
-              return false;
-            }
-          }
-    },
-    {
-        type: 'input',
-        name: 'contribution', 
-        message: 'What is the name of the contributor(s)?',
-        validate: contributeInput => {
-            if (contributeInput) {
-              return true;
-            } else {
-              console.log('Please enter name for the contributor(s).');
-              return false;
-            }
-          }
-    }
-  ])
+const promptUser = () => {
+    return inquirer.prompt([
+        {type: 'input',
+        message: 'What is the title of the project?',
+        name: 'title'},
+
+        {type: 'input',
+        message: 'Describe your project:',
+        name: 'description'
+        },
+
+        {type: 'input',
+        message: 'How do you install your project?',
+        name: 'install'
+        },
+
+        {type: 'input',
+        message: 'How is your project used?',
+        name: 'usage'
+        },
+
+        {type: 'input',
+        message: 'What tests run with your project?',
+        name: 'tests'
+        },
+
+        {type: 'input',
+        message: 'How can people contribute to your project?',
+        name: 'contribute'
+        },
+
+        {type: 'input',
+        message: 'What is your GitHub user name?',
+        name: 'github'
+        },
+
+        {type: 'input',
+        message: 'What is your email address?',
+        name: 'email'
+        },
+
+        {
+        name: "license",
+        type: "list",
+        message: "Choose your license:",
+        choices: ["MIT", "Apache", "GPL", "BSD3"],
+        },
+
+
+    ]);
 };
 
 
-// TODO: Create a function to write README file
-function writeToFile(generateMarkdown, readmeData) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+// Function to intialize the app
+const init = () => {
+    promptUser()
+      .then((answers) => writeFileAsync('README.md', generateMarkdown(answers)))
+      .then(() => console.log('Successfully wrote to README.md'))
+      .catch((err) => console.error(err));
+  };
 
 // Function call to initialize app
 init();
