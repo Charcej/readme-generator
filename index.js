@@ -1,4 +1,4 @@
-//Packages and modules needed for this application
+//Packages and modules
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -58,7 +58,7 @@ const promptUser = () => {
 };
 
 
-// Function to intialize the app
+// Function to init app
 const init = () => {
     promptUser()
       .then((answers) => writeFileAsync('README.md', generateMarkdown(answers)))
@@ -66,5 +66,5 @@ const init = () => {
       .catch((err) => console.error(err));
   };
 
-// Function call to initialize app
+// Function call to init app
 init();
