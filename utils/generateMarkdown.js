@@ -30,6 +30,7 @@ ${data.languages}
 ${data.install}
 ## Usage
 ${data.usage}
+
 ## Credits
 ${data.contribute}
 * GitHub: [${data.github}](https://github.com/${data.github})
