@@ -10,6 +10,8 @@ JavaScript,ES6,Node
 You have to install inquirer before running it.
 ## Usage
 <img width="787" alt="Screen Shot 2022-02-22 at 2 51 16 PM" src="https://user-images.githubusercontent.com/94859458/155208313-e92d0d76-f41e-4f18-8876-57fd698b0a4f.png">
+
+## Contributor
 Charles Johnston
 * GitHub: [charcej](https://github.com/charcej)
 * Email: 
