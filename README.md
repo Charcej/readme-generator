@@ -1,27 +1,20 @@
 
-[![Generic badge](https://img.shields.io/badge/license-Apache-<COLOR>.svg)](#license)
-# Readme Generator
-## Description
-It's an app that makes a readme
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Tests](#tests)
-* [Contributing](#contributing)
-* [License](#license)
-* [Questions](#questions)
+# Readme-generator
+## Description / Purpose
+An app that generates a README.md file from the command line.
+## This Version
+This is the first version of this application. In future versions, I would include other options and a table of contents for files that run long.
+## Built With:
+JavaScript,ES6,Node
 ## Installation
-You npm init and npm install inquirer
-## Tests
-All
+You have to install inquirer before running it.
 ## Usage
-Carefully
-## Contributing
-By contributing
-## License
-### This app is licensed under the [Apache](https://www.apache.org/licenses/LICENSE-2.0) license.
-## Questions
+<img width="1193" alt="Screen Shot 2022-01-29 at 9 10 57 PM" src="https://user-images.githubusercontent.com/94859458/151684033-09dae786-3c82-45eb-924a-dc99ec5aca19.png">
+## Credits
+Charles Johnston
 * GitHub: [charcej](https://github.com/charcej)
 * Email: 
 [charlesjohnston2002@yahoo.com](mailto:charlesjohnston2002@yahoo.com)
+## License
+### [MIT](https://opensource.org/licenses/MIT)
   

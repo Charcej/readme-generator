@@ -9,13 +9,26 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of the project?',
+            message: 'What is the title of your project?',
         },
 
         {
             type: 'input',
             name: 'description',
-            message: 'Describe your project:',
+            message: 'Please provide a description and / or purpose of your project:',
+        },
+
+        {
+            type: 'input',
+            name: 'version',
+            message: 'Please detail this version of your project:',
+        },
+
+        {
+            type: 'checkbox',
+            name: 'languages',
+            message: 'What did you build this project with? (Check all that apply)',
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
         },
 
         {
@@ -27,19 +40,13 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'How is your project used?',
-        },
-
-        {
-            type: 'input',
-            name: 'tests',
-            message: 'What tests run with your project?',
+            message: 'How is your project used? Feel free to include code of a screenshot:',
         },
 
         {
             type: 'input',
             name: 'contribute',
-            message: 'How can people contribute to your project?',
+            message: 'What is the name of the contributor to this project?',
         },
 
         {

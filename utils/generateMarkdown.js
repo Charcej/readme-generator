@@ -19,31 +19,24 @@ const generateMarkdown = data => {
   }
   
   return `
-[![Generic badge](https://img.shields.io/badge/license-${data.license}-<COLOR>.svg)](#license)
 # ${data.title}
-## Description
+## Description / Purpose
 ${data.description}
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Tests](#tests)
-* [Contributing](#contributing)
-* [License](#license)
-* [Questions](#questions)
+## This Version
+${data.version}
+## Built With:
+${data.languages}
 ## Installation
 ${data.install}
-## Tests
-${data.tests}
 ## Usage
 ${data.usage}
-## Contributing
+## Credits
 ${data.contribute}
-## License
-### This app is licensed under the [${data.license}](${licenseLink}) license.
-## Questions
 * GitHub: [${data.github}](https://github.com/${data.github})
 * Email: 
 [${data.email}](mailto:${data.email})
+## License
+### [${data.license}](${licenseLink})
   `
 }
 
