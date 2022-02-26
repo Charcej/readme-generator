@@ -20,6 +20,17 @@ const generateMarkdown = data => {
   
   return `
 # ${data.title}
+<a href="https://img.shields.io/badge/License-${data.license[0]}-brightgreen"><img src="https://img.shields.io/badge/License-${data.license[0]}-brightgreen"></a>
+
+## Table of Contents
+- [Description](#description)
+- [Version](#version)
+- [Languages](#languages)
+- [Installation](#install)
+- [Usage](#usage)
+- [Test Instructions](#test-instructions)
+- [Credits](#contribute)
+
 ## Description / Purpose
 ${data.description}
 ## This Version
@@ -30,6 +41,8 @@ ${data.languages}
 ${data.install}
 ## Usage
 ${data.usage}
+## Test Instructions
+${data.test}
 
 ## Credits
 ${data.contribute}
