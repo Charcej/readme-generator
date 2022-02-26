@@ -20,7 +20,7 @@ An app that generates a README.md file from the command line.
 ## Installation
 npm install inquirer
 ## Usage
-<img width="1015" alt="Screen Shot 2022-02-26 at 2 49 40 PM" src="https://user-images.githubusercontent.com/94859458/155857114-ab5e0a56-b7dd-47f3-80ac-78ec4421ae28.png">
+<img width="1015" alt="Screen Shot 2022-02-26 at 2 49 40 PM" src="https://user-images.githubusercontent.com/94859458/155858023-54d4afdd-5ec0-4b31-b025-ac90c952c21f.png">
 
 ## Test Instructions
 None

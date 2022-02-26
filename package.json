@@ -14,5 +14,10 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^6.5.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/cdfishe1/generate-readme/issues"
+  },
+  "homepage": "https://github.com/cdfishe1/generate-readme#readme",
+  "keywords": []
 }
