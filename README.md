@@ -6,24 +6,24 @@
 - [Description](#description)
 - [Version](#version)
 - [Languages](#languages)
-- [Installation](#install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Test Instructions](#test-instructions)
-- [Credits](#contribute)
+- [Credits](#credits)
 
-## Description / Purpose
+## Description
 An app that generates a README.md file from the command line.
-## This Version
-1.0.0 - This is the first version of this application. In future versions, I would include other options and a table of contents for files that run long.
-## Built With:
+## Version
+1.0.0
+## Languages
  JavaScript, ES6, Node
 ## Installation
-You have to install inquirer before running it.
+npm install inquirer
 ## Usage
 <img width="1015" alt="Screen Shot 2022-02-26 at 2 49 40 PM" src="https://user-images.githubusercontent.com/94859458/155857114-ab5e0a56-b7dd-47f3-80ac-78ec4421ae28.png">
 
 ## Test Instructions
-Noner
+None
 
 ## Credits
 Charles Johnston
