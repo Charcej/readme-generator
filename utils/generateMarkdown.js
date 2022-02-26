@@ -26,16 +26,16 @@ const generateMarkdown = data => {
 - [Description](#description)
 - [Version](#version)
 - [Languages](#languages)
-- [Installation](#install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Test Instructions](#test-instructions)
-- [Credits](#contribute)
+- [Credits](#credits)
 
-## Description / Purpose
+## Description
 ${data.description}
-## This Version
+## Version
 ${data.version}
-## Built With:
+## Languages
 ${data.languages}
 ## Installation
 ${data.install}
